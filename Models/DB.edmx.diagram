@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2afb40b570d8439fbc902d1bf6c4f4fe" Name="Diagram1">
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.se_eng_chg_types_t" Width="1.5" PointX="5.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.se_model_tbls_t" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.se_printers" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_bines_2_dt" Width="1.5" PointX="18" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_bines_dt" Width="1.5" PointX="21" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_colors_t" Width="1.5" PointX="15.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_cover_formats_t" Width="1.5" PointX="9" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_criterias_t" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_customer_no_t" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_dj_groups_t" Width="1.5" PointX="17.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_family_t" Width="1.5" PointX="1.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_flux_t" Width="1.5" PointX="15.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_history_t" Width="1.5" PointX="17.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_internal_no_t" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_kit_cfg_dt" Width="1.5" PointX="10.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_labels_path" Width="1.5" PointX="11" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_labels_t" Width="1.5" PointX="3.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_lbl_type_t" Width="1.5" PointX="3.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_lblMods_td" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_lines_t" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_mixed_bin_pr_dt" Width="1.5" PointX="17.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_model_cfg_t" Width="1.5" PointX="6" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_model_cover_cfg_td" Width="1.5" PointX="11.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_model_pck_cfg_t" Width="1.5" PointX="8.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_model_printers_dt" Width="1.5" PointX="13.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_inf_td" Width="1.5" PointX="15.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_lbl_cfg_td" Width="1.5" PointX="13.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_t" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_tables_t" Width="1.5" PointX="17.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_tbl_td" Width="1.5" PointX="13.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_models_validation_td" Width="1.5" PointX="3" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_ports_t" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_print_modes_t" Width="1.5" PointX="5.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_reviews_t" Width="1.5" PointX="3.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_rules_t" Width="1.5" PointX="3.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_sides_t" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_tblModels_cfg" Width="1.5" PointX="6" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_traceabilty_no_t" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_voltages_t" Width="1.5" PointX="15.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.sixsem_servers_t" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_casualty_log" Width="1.5" PointX="9.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_history_change" Width="1.5" PointX="17.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.siixsem_pending_change" Width="1.5" PointX="11.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.BINES" Width="1.5" PointX="19.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.BINES2" Width="1.5" PointX="19.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.COVERS" Width="1.5" PointX="13.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.DJGROUPS" Width="1.5" PointX="19.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.MODELS" Width="1.5" PointX="8.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.PRINTERS" Width="1.5" PointX="21.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="siixsem_upacking_config_dbModel.PRINTERS_MODELS" Width="1.5" PointX="0.75" PointY="22.875" IsExpanded="true" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_lines_t_se_printers" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_2_dt_siixsem_colors_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_2_dt_siixsem_flux_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_2_dt_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_2_dt_siixsem_voltages_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_dt_siixsem_colors_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_dt_siixsem_flux_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_dt_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_bines_dt_siixsem_voltages_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cover_cfg_td_siixsem_cover_formats_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cover_cfg_td_siixsem_cover_formats_t1" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_customer_no_t_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_customer_no_t_siixsem_sides_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_customer_no_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_t_siixsem_family_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_internal_no_t_siixsem_sides_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_internal_no_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_kit_cfg_dt_siixsem_model_pck_cfg_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_kit_cfg_dt_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_labels_path_siixsem_ports_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_labels_path_sixsem_servers_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_lbl_cfg_td_siixsem_labels_path" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_lbl_cfg_td_siixsem_labels_path1" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_lbl_cfg_td_siixsem_labels_path2" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_lbl_cfg_td_siixsem_labels_path3" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_lbl_cfg_td_siixsem_labels_path4" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_lblMods_td_siixsem_labels_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_lblMods_td_siixsem_lbl_type_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_lblMods_td_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_lblMods_td_siixsem_sides_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cover_cfg_td_siixsem_lblMods_td" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_lblMods_td" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_lines_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_printers_dt_siixsem_lines_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cfg_t_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cfg_t_siixsem_reviews_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_cfg_t_siixsem_rules_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_model_cfg_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_model_cover_cfg_td" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_models_t1" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_sides_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_tblModels_cfg" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_pck_cfg_t_siixsem_traceabilty_no_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_model_printers_dt_siixsem_model_pck_cfg_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_inf_td_siixsem_models_lbl_cfg_td" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_inf_td_siixsem_models_tbl_td" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_models_validation_td_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_rules_t_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_tblModels_cfg_siixsem_models_t" ManuallyRouted="false" />
+        <AssociationConnector Association="siixsem_upacking_config_dbModel.FK_siixsem_traceabilty_no_t_siixsem_sides_t" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

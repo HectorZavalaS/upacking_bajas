@@ -1,0 +1,617 @@
+﻿
+
+@{
+    ViewBag.Title = "Bajas Upacking";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+@*<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">*@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .info-msg,
+    .success-msg,
+    .warning-msg,
+    .error-msg {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 3px 3px 3px 3px;
+    }
+
+    .info-msg {
+        color: #059;
+        background-color: #BEF;
+    }
+
+    .success-msg {
+        color: #270;
+        background-color: #DFF2BF;
+    }
+
+    .warning-msg {
+        color: #9F6000;
+        background-color: #FEEFB3;
+    }
+
+    .error-msg {
+        color: #D8000C;
+        background-color: #FFBABA;
+    }
+</style>
+<main aria-labelledby="title">
+    @*<h2 id="title">@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>*@
+
+    <img src="~/img/logo.png" style="width:15%; height:15%;" />
+
+    <div class="container">
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Upacking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">SIT</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">Consulta de Información</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+                <br>
+                <center><h3>Baja de material en sistema Upacking</h3></center>
+                <br />
+                <div class="container mt-3">
+                    <!--1er. Contenedor -->
+                    <div class="row">
+                        <!--COMBOBOX MODELOS -->
+                        <div class="col-lg-3">
+                            <center><h5>Modelos</h5></center>
+                            <select class="selectpicker select_models form-control" id="modelo" data-live-search="true">
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <center><h5>Proceso</h5></center>
+                            <select class="selectpicker form-control" id="proceso" data-live-search="true">
+                                <option value="0">Elige opción</option>
+                                <option value="cover">Linkeo de Cover</option>
+                                <option value="packing">Empaque</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <center><h5>Tipo de baja</h5></center>
+                            <select class="selectpicker form-control" id="tipo_baja" data-live-search="true">
+                                <option value="serial">Solo serial</option>
+                                <option value="caja">Caja completa</option>
+                            </select>
+
+                        </div>
+                        <!--BOTON DE BUSCAR SERIALES -->
+                        <div class="col-lg-1">
+                            <center>
+                                <h5>Buscar</h5>
+                                <button type="button" class="btn btn-default btn-sm fa fa-search btn-default" style="background:#7ED957;" onclick="ObtenerDatos()"></button> <!--BOTON EJECUTA FUNCION DE JS PARA BUSCAR LOS SERIALES -->
+                            </center>
+                        </div>
+                        <!--BOTON DE DAR DE BAJA SERIALES -->
+                        <div class="col-lg-2">
+                            <center>
+                                <h5>Dar de baja</h5>
+                                <button type="button" class="btn btn-danger btn-sm fa fa-download btn-default" onclick="Dar_de_baja()"></button> <!--BOTON EJECUTA FUNCION DE JS PARA BUSCAR LOS SERIALES -->
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="container ">
+                    <!--1er. Contenedor -->
+                    <div class="row">
+                        <!--COMBOBOX MODELOS -->
+                        <div class="col-lg-3">
+                            <input class="form-control" type="text" id="se_name" placeholder="Usuario" />
+                        </div>
+                        <div class="col-lg-9">
+                            <input class="form-control" type="text" id="motivo" placeholder="Motivo de baja" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+                <br>
+                <center><h3>Baja de material de piezas SIT</h3></center>
+                <br />
+                <div class="row">
+                    <div class="col-lg-5">
+                        <center>
+                            <h5>Modelos</h5>
+                            <select class="selectpicker select_models form-control" id="modelos_SIT" data-live-search="true">
+                                <option value="SITDFC">SIT DFC</option>
+                                <option value="SITIFC">SIT IFC</option>
+                                <option value="siixsem_sit_minivolt_2020">SIT MiniVolt</option>
+                                <option value="siixsem_sit_partial_2020">Reetrabajo SIT</option>
+                            </select>
+                        </center>
+                    </div>
+                    <div class="col-lg-3">
+                        <center>
+                            <h5>Tipo de baja</h5>
+                            <select class="selectpicker form-control" id="tipo_baja_SIT" data-live-search="true">
+                                <option value="serial">Solo serial</option>
+                                <option value="caja">Caja completa</option>
+                            </select>
+                        </center>
+                    </div>
+
+
+                    <!--BOTON DE BUSCAR SERIALES -->
+                    <div class="col-lg-1">
+                        <center>
+                            <h5>Buscar</h5>
+                            <button type="button" class="btn btn-default btn-sm fa fa-search btn-default" style="background:#7ED957;" onclick="ObtenerDatosSIT()"></button> <!--BOTON EJECUTA FUNCION DE JS PARA BUSCAR LOS SERIALES -->
+                        </center>
+                    </div>
+                    <!--BOTON DE DAR DE BAJA SERIALES -->
+                    <div class="col-lg-2">
+                        <center>
+                            <h5>Dar de baja</h5>
+                            <button type="button" class="btn btn-danger btn-sm fa fa-download btn-default" onclick="Dar_de_bajaSIT()"></button> <!--BOTON EJECUTA FUNCION DE JS PARA BUSCAR LOS SERIALES -->
+                        </center>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div id="menu2" class="container tab-pane fade">
+                <br>
+                <center><h3>Consulta de material</h3></center>
+                <br />
+                <div class="row">
+                    <div class="col-lg-3">
+                        <center>
+                            <h5>Sistema</h5>
+                            <select class="selectpicker select_models form-control" id="system" data-live-search="true">
+                                <option value="SITDFC">Upacking</option>
+                                <option value="SITIFC">Jpacking</option>
+                            </select>
+                        </center>
+                    </div>
+                    <div class="col-lg-5">
+                        <center>
+                            <h5>Modelos</h5>
+                            <select class="selectpicker select_models form-control" id="modelos_c" data-live-search="true">
+                            </select>
+                        </center>
+                    </div>
+                    <div class="col-lg-3">
+                        <center>
+                            <h5>Informacion que tienes para consultar</h5>
+                            <select class="selectpicker form-control" id="tipo_baja_SIT" data-live-search="true">
+                                <option value="serial">Serial</option>
+                                <option value="caja">QR de caja</option>
+                            </select>
+                        </center>
+                    </div>
+
+
+                    <!--BOTON DE BUSCAR SERIALES -->
+                    <div class="col-lg-1">
+                        <center>
+                            <h5>Buscar</h5>
+                            <button type="button" class="btn btn-default btn-sm fa fa-search btn-default" style="background:#7ED957;" onclick="ObtenerDatosSIT()"></button> <!--BOTON EJECUTA FUNCION DE JS PARA BUSCAR LOS SERIALES -->
+                        </center>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="container mt-3">
+        <br />
+        <!--2° Contenedor -->
+        <h5>Seriales</h5>
+        <p>Escanea seriales de cover o pcb</p>
+        <div class="row">
+            <div class="col-lg-4 inputs">
+                <input id="serial_0" class="form-control" type="text" />
+                <input id="serial_1" class="form-control" type="text" />
+                <input id="serial_2" class="form-control" type="text" />
+                <input id="serial_3" class="form-control" type="text" />
+            </div>
+            <div class="col-lg-4 inputs2">
+                <input id="serial_4" class="form-control" type="text" />
+                <input id="serial_5" class="form-control" type="text" />
+                <input id="serial_6" class="form-control" type="text" />
+                <input id="serial_7" class="form-control" type="text" />
+            </div>
+            <div class="col-lg-4 inputs3">
+                <input id="serial_8" class="form-control" type="text" />
+                <input id="serial_9" class="form-control" type="text" />
+                <input id="serial_10" class="form-control" type="text" />
+                <input id="serial_11" class="form-control" type="text" />
+            </div>
+        </div>
+        <br />
+
+        <!--Notificaciones -->
+        <div class="success-msg" id="success">
+            <i class="fa fa-check"></i>
+            ¡Se dio de baja los seriales con éxito!
+        </div>
+        <div class="success-msg" id="success2">
+            <i class="fa fa-check"></i>
+            ¡Se dio de baja la caja completa con éxito!
+        </div>
+        <div class="warning-msg" id="warning">
+            <i class="fa fa-exclamation"></i>
+            No se encontraron registros activos
+        </div>
+        <div class="error-msg" id="error-msg">
+            <i class="fa fa-exclamation"></i>
+            Favor de llenar los campos de usuario, motivo de baja del material y/o seriales
+        </div>
+        <div class="error-msg" id="error-msg2">
+            <i class="fa fa-exclamation"></i>
+            Favor ingresar un usuario valido (usuario para usar upacking)
+        </div>
+        <div class="info-msg" id="info-msg">
+            <i class="fa fa-exclamation"></i>
+            Favor de escanear seriales en los campos de texto
+        </div>
+        <!--COMBOBOX MODELOS -->
+        @*<div class="row">
+
+                <div class="col-sm-4">
+                    <center><h5>Usuario que da de baja</h5></center>
+                </div>
+                <div class="col-sm-4">
+                    <center><h5>Motivo</h5></center>
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+            </div>*@
+        <!--tablas -->
+        <table class="table table-dark" id="table">
+            <thead>
+                <tr>
+                    <th><center>Serial de PCB</center></th>
+                    <th><center>Serial Cover</center></th>
+                    <th><center>Numero de caja</center></th>
+                    <th><center>Fecha Jualiana</center></th>
+                    <th><center>Linea</center></th>
+                    <th><center>Estatus</center></th>
+                </tr>
+            </thead>
+            <tbody class="tbody" id="tbody">
+            </tbody>
+        </table>
+
+        <!--termina tablao -->
+    </div>
+</main>
+<script>
+    $(document).ready(function () { //ObtenerDatos();
+        ObtenerModelos();
+        $("#success").hide();
+        $("#success2").hide();
+        $("#warning").hide();
+        $("#error-msg").hide();
+        $("#error-msg2").hide();
+        $("#info-msg").hide();
+
+        $('#tipo').change(function (e) {
+            if ($(this).val() === "0") {
+                $('#tipo_baja').prop("disabled", true);
+            }
+            if ($(this).val() === "cover") {
+                $('#tipo_baja').prop("disabled", true);
+            }
+            if ($(this).val() === "packing") {
+                $('#tipo_baja').prop("disabled", false);
+            }
+        })
+
+    });
+    function ObtenerModelos() {
+        $.ajax({
+            url: "/upacking/getModels",
+            type: "POST",
+            cache: false,
+            beforeSend:
+                function (cargando) {
+                },
+            success:
+                function (result) {
+                    for (u in result) {
+                        $("#modelo").append("<option value=" + result[u].se_id + ">" + result[u].se_description + "</option>");
+                    }
+                },
+            error: function (errormessage) {
+                alertify.error('Upss... Ocurrio un error comunicate al departamento de IT ¡Gracias!');
+            }
+        });
+    }
+    function ObtenerDatos() {
+        var se_model = $('#modelo').val();
+        var se_type = $('#proceso').val();
+        $("#success").hide();
+        $("#success2").hide();
+        $("#warning").hide();
+        $("#error-msg").hide();
+        $("#info-msg").hide();
+        $("#tipo option[value='cover']").prop("disabled", true);
+        const arr = [];
+        for (var i = 0; i < 12; i++) {
+            var serial_ = $('#serial_' + i).val();
+
+            if (serial_ != '') {
+                arr.push("'" + $('#serial_' + i).val() + "'");
+            }
+        }
+
+        if (arr.toString() != '') {
+            $.ajax({
+                url: "/upacking/get_information",
+                type: "POST",
+                data: {
+                    se_serial: arr.toString(),
+                    se_model: se_model,
+                    se_type: se_type,
+                    se_down_type: $('#tipo_baja').val()
+                },
+                cache: false,
+                beforeSend:
+                    function (cargando) {
+                    },
+                success:
+                    function (result) {
+                        console.log(result);
+                        var html = '';
+
+
+
+                        $.each(result, function (key, item) {
+                            //if (item.message != null) {
+                            //    $("#error-msg").show();
+                            //}
+                            if (item.message == "No se encontraron registros") {
+                                $("#warning").show();
+                            }
+                            else {
+                                html += '<tr class="fila row_table" id="fila">';
+                                html += '<td><center>' + item.se_serial + '</center></td>';
+                                if (item.se_type == 'cover') {
+                                    html += '<td><center>' + item.se_serial_cover + '</center></td>';
+                                    html += '<td><center>N/A</center></td>';
+                                    html += '<td><center>N/A</center></td>';
+                                }
+                                if (item.se_type == 'packing') {
+                                    html += '<td><center>N/A</center></td>';
+                                    html += '<td><center>' + item.se_box_no + '</center></td>';
+                                    html += '<td><center>' + item.se_julian_date + '</center></td>';
+                                }
+                                html += '<td><center>' + item.se_name_line + '</center></td>';
+                                if (item.se_status == 'D') {
+                                    html += '<td><center>Inactivo</center></td>';
+                                }
+                                if (item.se_status == 'A') {
+                                    html += '<td><center>Activo</center></td>';
+                                }
+                                if (item.se_status == 'P') {
+                                    html += '<td><center>Parcial</center></td>';
+                                }
+                                html += '</tr>';
+                            }
+                        });
+                        $('.tbody').html(html);
+                    }
+
+                ,
+
+                error: function (errormessage) {
+                    alertify.error('Upss... Ocurrio un error comunicate al departamento de IT ¡Gracias!');
+                }
+            });
+        } else {
+            $("#info-msg").show();
+
+        }
+    }
+    function Dar_de_baja() {
+        $("#error-msg").hide();
+        $("#error-msg2").hide();
+        var se_model = $('#modelo').val();
+        var se_down_type = $('#tipo_baja').val();
+        var se_type = $('#proceso').val();
+        const arr = [];
+        for (var i = 0; i < 12; i++) {
+            var serial_ = $('#serial_' + i).val();
+
+            if (serial_ != '') {
+                arr.push("'" + $('#serial_' + i).val() + "'");
+            }
+        }
+        console.log(se_type);
+        var se_name = $('#se_name').val();
+        var se_motivo = $('#motivo').val();
+        if (se_name == "" || se_motivo == "" || arr.toString() == "") {
+            // console.log("Favor de llenar los campos de usuario y/o motivo ");
+            $("#error-msg").show();
+        }
+        else {
+            $.ajax({
+                url: "/upacking/update_estaatus",
+                type: "POST",
+                data: {
+                    se_serial: arr.toString(),
+                    se_model: se_model,
+                    se_type: se_type,
+                    se_down_type: $('#tipo_baja').val(),
+                    se_name: se_name,
+                    se_motivo: se_motivo
+                },
+                cache: false,
+                beforeSend:
+                    function (cargando) {
+                    },
+                success:
+                    function (result) {
+                        if (result == "Se dio de baja serial con éxito") {
+                            $("#success").show();
+                        }
+                        if (result == "Se dio de baja la caja completa con éxito") {
+                            $("#success2").show();
+                        }
+                        if (result == "No se encontro usuario") {
+                            $("#error-msg2").show();
+                        }
+
+
+                        $("#tbody").empty();
+                        //ObtenerDatos();
+                    },
+
+                error: function (errormessage) {
+                }
+            });
+        }
+
+    }
+
+    function ObtenerDatosSIT() {
+        var se_model = $('#modelos_SIT').val();
+        var se_type = $('#tipo').val();
+        $("#success").hide();
+        $("#success2").hide();
+        $("#warning").hide();
+        $("#error-msg").hide();
+        $("#info-msg").hide();
+        const arr = [];
+        for (var i = 0; i < 12; i++) {
+            var serial_ = $('#serial_' + i).val();
+
+            if (serial_ != '') {
+                arr.push("'" + $('#serial_' + i).val() + "'");
+            }
+        }
+
+        if (arr.toString() != '') {
+            $.ajax({
+                url: "/jpacking/get_informationSIT",
+                type: "POST",
+                data: {
+                    se_serial: arr.toString(),
+                    se_model: se_model,
+                    se_type: se_type,
+                    se_down_type: $('#tipo_baja').val(),
+                    se_table: $('#modelos_SIT').val()
+                },
+                cache: false,
+                beforeSend:
+                    function (cargando) {
+                    },
+                success:
+                    function (result) {
+                        console.log(result);
+                        var html = '';
+                        $.each(result, function (key, item) {
+                            //if (item.message != null) {
+                            //    $("#error-msg").show();
+                            //}
+                            if (item.message == "No se encontraron registros") {
+                                $("#warning").show();
+                            }
+                            else {
+                                html += '<tr class="fila row_table" id="fila">';
+                                html += '<td><center>' + item.se_serial + '</center></td>';
+                                html += '<td><center>N/A</center></td>';
+                                html += '<td><center>' + item.se_box_no + '</center></td>';
+                                html += '<td><center>' + item.se_julian_date + '</center></td>';
+
+                                html += '<td><center>N/A</center></td>';
+                                if (item.se_status == 'D') {
+                                    html += '<td><center>Inactivo</center></td>';
+                                }
+                                if (item.se_status == 'N') {
+                                    html += '<td><center>Activo</center></td>';
+                                }
+                                html += '</tr>';
+                            }
+                        });
+                        $('.tbody').html(html);
+                    }
+
+                ,
+
+                error: function (errormessage) {
+                    alertify.error('Upss... Ocurrio un error comunicate al departamento de IT ¡Gracias!');
+                }
+            });
+        } else {
+            $("#info-msg").show();
+
+        }
+    }
+    function Dar_de_bajaSIT() {
+        var se_model = $('#modelos_SIT').val();
+        var se_down_type = $('#tipo_baja_SIT').val();
+        /* var se_type = $('#tipo').val();*/
+        const arr = [];
+        for (var i = 0; i < 12; i++) {
+            var serial_ = $('#serial_' + i).val();
+
+            if (serial_ != '') {
+                arr.push("'" + $('#serial_' + i).val() + "'");
+            }
+        }
+
+        $.ajax({
+            url: "/jpacking/update_statusSIT",
+            type: "POST",
+            data: {
+                se_serial: arr.toString(),
+                se_table: se_model,
+                /*se_type: se_type,*/
+                se_down_type: $('#tipo_baja_SIT').val()
+            },
+            cache: false,
+            beforeSend:
+                function (cargando) {
+                },
+            success:
+                function (result) {
+                    if (result == "Se dio de baja serial con éxito") {
+                        $("#success").show();
+                    }
+                    if (result == "Se dio de baja la caja completa con éxito") {
+                        $("#success2").show();
+                    }
+
+                    $("#tbody").empty();
+                    //ObtenerDatos();
+                },
+
+            error: function (errormessage) {
+            }
+        });
+    }
+</script>
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>*@
